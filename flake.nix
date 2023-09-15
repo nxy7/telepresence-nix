@@ -16,14 +16,14 @@
       in {
         defaultPackage = pkgs.buildGoModule rec {
           pname = "telepresence2";
-          version = "2.14.0";
+          version = "2.15.1";
           src = pkgs.fetchFromGitHub {
             owner = "telepresenceio";
             repo = "telepresence";
-            rev = "v2.14.0";
-            sha256 = "sha256-hsQgBE0XAsRv/7uAjSPYlcNCHVltyEoF2XsXOqKmo+I=";
+            rev = "v${version}";
+            sha256 = "sha256-67a5e7Lun/mlRwRoD6eomQpgUXqzAUx8IS7Mv86j6Gw=";
           };
-          vendorSha256 = "sha256-FMBXbvDQxmgDTEtD1Ky39eeRHFKfsbQQy/2HQeP0/X0=";
+          vendorSha256 = "sha256-/13OkcLJI/q14tyFsynL5ZAIITH1w9XWpzRqZoJJesE=";
           preBuild = "cp ${fusebits} pkg/client/remotefs/fuseftp.bits";
           nativeBuildInputs = with pkgs; [ git ];
 
